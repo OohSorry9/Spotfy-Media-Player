@@ -1,0 +1,268 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+    color:white
+
+}
+
+ nav {
+    display: flex;
+    height: 80px;
+    width: 100%;
+    align-items: center;
+    background-color: black;
+    color:white;
+
+ }
+ nav ul li a{
+    text-decoration: none;
+    list-style-type: none;
+    color: white;
+    transition: all .3s ease-in;
+ }
+ nav ul li a:hover {
+    color: lime;
+    text-decoration: underline;
+ }
+
+ .logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 10px;
+ }
+
+ nav ul li {
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+ }
+ nav ul {
+    margin: 0 30px;
+ }
+
+ .container {
+    height: 80%;
+    background-color: rgba(0, 0, 0, .9);
+    display:flex;
+    width: 100%;
+ }
+
+
+
+ .songitem {
+    width: 100%;
+    height: 5em;
+    background-color: rgba(255, 255, 255, .1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    color: white;
+ }
+
+ .song-item-container{
+    width: 60%;
+    max-width: 50%;
+    overflow-y: scroll;
+ }
+ .cover {
+    width: 50%;
+    max-width: 50%;
+    background-image: url(assets/photo.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+ }
+
+ .song-item-container .songitem .songlogo {
+    width: 7.5em;
+    height: 100%;
+    background-color: black;
+    margin-right: 15px;
+ }
+
+ .slogo {
+    
+    width: 100%;
+    height: 100%;
+}
+
+span {
+    font-weight: bold;
+    padding: 0 20px;
+}
+.songinfo{
+    padding: 0px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.masterControls {
+    height: 20%;
+    position: sticky;
+    bottom: 0;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+ }
+.masterControls #seekBar {
+    width: 80%;
+    cursor: pointer;
+}
+
+.masterControls .icons {
+    color: white;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.masterControls .icon {
+    cursor: pointer;
+    margin: 0 10px;
+    font-size: 25px;
+    opacity: .7;
+    transition: opacity .3s ease;
+    
+}
+.masterControls .icon:hover {
+    opacity: 1;
+    text-shadow: 0 0 25px white;
+}
+.masterControls .big{
+    font-size: 40px;
+} 
+.masterControls .masterInfo{
+    position: absolute;
+    left: 10vw;
+    margin: 35px 0
+}
+.masterControls .masterInfo #gif{
+    opacity: 0;
+    transition: opacity .3s ease-in;
+}
+.songItemPlay {
+    margin: 20px;
+    padding: 12px;
+    border: 1px solid green;
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+    transition: all .3s ease-in;
+}
+
+.songItemPlay:hover{
+    border: 1px solid lime;
+    color: whitesmoke;
+    box-shadow: 0 0 75px lime;
+}
+
+.padfix{
+    padding: 12px 13px;
+
+}
+@media only screen and (max-width: 730px) {
+    .cover {
+        display: none;
+    }
+    .song-item-container{
+        max-width: 100%;
+        width: 100%;
+    }
+    .masterControls .masterInfo{
+        position: absolute;
+        left: 5vw;
+        margin: 25px 0
+    }
+}
+
+@media only screen and (max-width: 1000px){
+
+    .cover{
+        background-size: 100% 70%;
+        background-position: top right;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+
+    .masterControls .masterSongName{
+       padding: 10px;
+       font-size: 14px;
+    }
+    .masterControls .masterInfo{
+        left: 50vw;
+        transform: translateX(-50%);
+        margin: 3em -1.5em;
+    }
+    .masterControls .big{
+        font-size: 30px;
+    } 
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: 0 0 20px white; 
+    border-radius: 50px;
+    background: black;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: green; 
+    border-radius:50px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: limegreen; 
+  }
+
+  input[type="range"] {
+    -webkit-appearance: none;   
+    height: 1px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 10px;
+    background-image: linear-gradient( to right, lime, green);
+    background-repeat: no-repeat;
+  }
+  
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background: green;
+    border: 1px solid rgba(0, 200, 0, .5);
+    cursor: pointer;
+    box-shadow: 0 0 2px 0 lime;
+    transition: background .3s ease-in-out;
+  }
+  
+  input[type=range]::-webkit-slider-runnable-track  {
+    -webkit-appearance: none;
+    box-shadow: none;
+    border: none;
+    background: transparent;
+  }
