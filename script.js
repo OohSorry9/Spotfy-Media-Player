@@ -9,6 +9,7 @@ let songItemPlay = Array.from(document.getElementsByClassName('songItemPlay'));
 let masterName = document.getElementById('masterName');
 let next = document.getElementById('next');
 let back = document.getElementById('back');
+let gifs = Array.from(document.getElementsByClassName('gifs'));
 
 let sIndex;
 
@@ -41,12 +42,18 @@ const songs = [
             masterPlay.classList.remove('fa-play');
             masterPlay.classList.add('fa-pause');
             gif.style.opacity = 1;
+            gifs[songIndex -1].classList.remove('gifs')
+            sIndex.classList.remove('fa-play');
+            sIndex.classList.add('fa-pause');
         }
         else {
             audioElement.pause();
             masterPlay.classList.remove('fa-pause');
             masterPlay.classList.add('fa-play');
             gif.style.opacity = 0;
+            gifs[songIndex -1].classList.add('gifs')
+            sIndex.classList.remove('fa-pause');
+            sIndex.classList.add('fa-play');
             
         }
     })
@@ -66,8 +73,10 @@ const songs = [
         songItemPlay.forEach((element)=>{
             element.classList.add('fa-play');
         })
+        gifs.forEach((element)=>{
+            element.classList.add('gifs');
+        })
     }
-
     songItemPlay.forEach((element)=>{
     element.addEventListener('click', (e)=>{
         makeAllPlays();
@@ -75,12 +84,13 @@ const songs = [
         e.target.classList.remove('fa-play');
         e.target.classList.add('fa-pause');
         e.target.classList.add('padfix');
+        
+        gifs[index -1].classList.remove('gifs');
         audioElement.src = `songs/${index}.mp3`;
         audioElement.currentTime = 0;
         audioElement.play();
         masterPlay.classList.remove('fa-play');
         masterPlay.classList.add('fa-pause');
-        console.log(e.target);
         masterName.innerText = songs[index -1].songName;
 
     })
@@ -95,9 +105,10 @@ const songs = [
         songIndex+=1;
     }
     makeAllPlays();
-//  trying to make pause apear when next
+//  trying to make pause apear when next and gifs
     sIndex = document.getElementById(songIndex);
     masterName.innerText = songs[songIndex -1].songName;
+    gifs[songIndex-1].classList.remove('gifs');
     // rest of the code
     audioElement.src = `songs/${songIndex}.mp3`;
     audioElement.currentTime = 0;
@@ -122,6 +133,8 @@ const songs = [
     sIndex = document.getElementById(songIndex);
     sIndex.classList.remove('fa-play');
     sIndex.classList.add('fa-pause');
+    
+    gifs[songIndex-1].classList.remove('gifs');
     //rest of code
     masterName.innerText = songs[songIndex -1].songName;
     audioElement.src = `songs/${songIndex}.mp3`;
@@ -132,3 +145,4 @@ const songs = [
 
 
  })
+
