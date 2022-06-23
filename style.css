@@ -157,6 +157,11 @@ span {
     opacity: 0;
     transition: opacity .3s ease-in;
 }
+
+.gifs {
+    opacity: 0;
+    transition: opacity .3s ease-in;
+}
 .songItemPlay {
     margin: 20px;
     padding: 12px;
