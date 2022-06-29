@@ -1,0 +1,95 @@
+body {
+    background-color: black;
+}
+.cover {
+    background-image: url(../../assets/BeFunky-collage.png);
+}
+
+.container {
+
+    background-color: rgba(182, 0, 182, .2);
+
+ }
+
+ .songitem {
+    background-color: rgba(255, 255, 255, .1);
+ } 
+
+ .playlistHeading{
+    border-bottom: 2px solid purple;
+ }
+ .playlistHeading h2 {
+    border-bottom: 2px solid magenta;
+ }
+
+ .songItemPlay{
+    border: 1px solid purple;
+ }
+ .songItemPlay:hover{
+    border: 1px solid magenta;
+    box-shadow: 0 0 70px magenta;
+ }
+
+   /* Handle */
+   ::-webkit-scrollbar-thumb {
+    background: purple; 
+    border-radius:50px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: magenta; 
+  }
+
+.pfp1{
+   background-image: url(pfps/1.png);
+}
+.pfp2{
+   background-image: url(pfps/2.png);
+}
+.pfp3{
+   background-image: url(pfps/3.png);
+}
+.pfp4{
+   background-image: url(pfps/4.png);
+}
+.pfp5{
+   background-image: url(pfps/5.png);
+}
+.pfp6{
+   background-image: url(pfps/6.png);
+}
+.pfp7{
+   background-image: url(pfps/7.png);
+}
+.pfp8{
+   background-image: url(pfps/8.png);
+}
+.pfp9{
+   background-image: url(pfps/9.png);
+}
+.pfp10{
+   background-image: url(pfps/10.png);
+}
+.pfp11{
+   background-image: url(pfps/11.png);
+}
+
+.pfp {
+   margin-top: 5px;
+   width: 50px;
+   height: 50px;
+   position: absolute;
+   top: 50%;
+   left: 80%;
+   transform: translate(-50%, -50%);
+   background-size: cover;
+}
+
+@media only screen and (max-width: 450px){
+   .pfp{
+      left: 90%;
+      margin-right: 10px;
+   }
+}
+   

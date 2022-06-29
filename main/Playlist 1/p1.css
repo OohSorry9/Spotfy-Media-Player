@@ -1,0 +1,18 @@
+body {
+    background: black;
+}
+
+.cover {
+
+    background-image: url(../../assets/photo.png);
+}
+
+.container {
+
+    background-color: rgba(0, 22, 0, .9);
+
+ }
+
+ .songitem {
+    background-color: rgba(245, 245, 245, .1);
+ } 

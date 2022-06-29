@@ -1,0 +1,42 @@
+body {
+    background-color: black;
+}
+.cover {
+    background-image: url(../../assets/Talha-Anjum.png);
+}
+
+.container {
+
+    background-color: rgba(182, 0, 0, .2);
+
+ }
+
+ .songitem {
+    background-color: rgba(255, 255, 255, .1);
+ } 
+
+ .playlistHeading{
+    border-bottom: 2px solid maroon;
+ }
+ .playlistHeading h2 {
+    border-bottom: 2px solid red;
+ }
+
+ .songItemPlay{
+    border: 1px solid #b00505;
+ }
+ .songItemPlay:hover{
+    border: 1px solid red;
+    box-shadow: 0 0 70px rgb(255, 0, 0);;
+ }
+
+   /* Handle */
+   ::-webkit-scrollbar-thumb {
+    background: #b00505; 
+    border-radius:50px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: red; 
+  }
