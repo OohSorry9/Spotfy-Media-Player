@@ -297,7 +297,16 @@ span {
     border-radius: 50px;
     background: black;
   }
-   
+  @media only screen and (max-width: 407px){
+    nav ul{
+        margin: 0 12px;
+    }
+}
+@media only screen and (max-width: 370px){
+    nav ul{
+        margin: 0 5px;       
+    }
+}   
   /* Handle */
   ::-webkit-scrollbar-thumb {
     background: green; 
